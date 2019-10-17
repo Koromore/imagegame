@@ -1,0 +1,106 @@
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+  margin: 0;
+  padding: 0
+}
+
+.imgbox {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+}
+
+.imgbox #whole {
+  position: relative;
+  z-index: 6;
+}
+
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  color: white;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  background: url('../img/xh.jpg') no-repeat;
+  background-size: 300px;
+  transition: all .5s;
+}
+
+.imgbox div:nth-of-type(1) {
+  background-position: left top;
+}
+
+.imgbox div:nth-of-type(2) {
+  background-position: center top;
+}
+
+.imgbox div:nth-of-type(3) {
+  background-position: right top;
+}
+
+.imgbox div:nth-of-type(4) {
+  background-position: left center;
+}
+
+.imgbox div:nth-of-type(5) {
+  background-position: center center;
+}
+
+.imgbox div:nth-of-type(6) {
+  background-position: right center;
+}
+
+.imgbox div:nth-of-type(7) {
+  background-position: left bottom;
+}
+
+.imgbox div:nth-of-type(8) {
+  background-position: center bottom;
+}
+
+.imgbox div:nth-of-type(9) {
+  background-position: right bottom;
+}
+
+#maskbox {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 9;
+}
+
+.mask-info {
+  border-radius: 30px;
+  color: #333;
+  font-size: 30px;
+  text-align: center;
+  width: 200px;
+  line-height: 100px;
+  height: 100px;
+  margin: 100px auto;
+  background-color: rgba(255, 255, 255, .5);
+}
