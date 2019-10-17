@@ -1,4 +1,20 @@
 $(function () {
+  // 禁止微信QQ浏览时的下拉事件，不过会将页面内其他下拉滑动也禁止
+  $('body').on('touchmove', function (event) {
+    event.preventDefault();
+  });
+
+  document.addEventListener('touchmove', {
+    function(e) {
+      e.preventDefault()
+    }
+  }, false);
+
+  document.body.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+  }, { passive: false });
+  // 禁止微信QQ浏览时的下拉事件，不过会将页面内其他下拉滑动也禁止
+
   document.getElementById("btn").addEventListener("click", function () {
     // 打散
     $("#whole").hide();
