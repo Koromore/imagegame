@@ -15,6 +15,35 @@ $(function () {
   }, { passive: false });
   // 禁止微信QQ浏览时的下拉事件，不过会将页面内其他下拉滑动也禁止
 
+    // 设置拼图照片
+    function sjnum() {
+      let sjnum = parseInt(Math.random() * 2, 10) + 1
+      let num = sjnum
+      let src = `img/game_${num}.jpg`
+      let imgUrl = `url(${src}) no-repeat`
+      let box = $(".box")
+  
+      $("#whole").attr("src", src)
+      for (let i = 0; i < box.length; i++) {
+        box.css("background", imgUrl)
+      }
+    }
+    sjnum()
+    // 点击更换图片
+    $("#sjnum").click(function () {
+      let sjnum = parseInt(Math.random() * 2, 10) + 1
+      let num = sjnum
+      let src = `img/game_${num}.jpg`
+      let imgUrl = `url(${src}) no-repeat`
+      let box = $(".box")
+  
+      $("#whole").attr("src", src)
+      for (let i = 0; i < box.length; i++) {
+        box.css("background", imgUrl)
+      }
+    })
+    // 设置拼图照片
+
   document.getElementById("btn").addEventListener("click", function () {
     // 打散
     $("#whole").hide();
